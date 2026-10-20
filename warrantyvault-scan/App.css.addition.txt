@@ -1,0 +1,19 @@
+/* WarrantyVault camera scanner */
+.scan-layout { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.15fr); gap:18px; align-items:start; margin-bottom:25px; }
+.scan-camera-panel, .scan-fields-panel { min-width:0; }
+.scan-preview { position:relative; display:grid; place-items:center; min-height:280px; margin:16px; overflow:hidden; border:1px dashed #3c5b43; border-radius:10px; background:#0d1710; }
+.scan-video, .scan-photo { display:block; width:100%; max-height:520px; object-fit:contain; background:#08100b; }
+.scan-placeholder { display:flex; flex-direction:column; align-items:center; gap:10px; padding:35px 20px; color:#86d99d; text-align:center; }
+.scan-placeholder strong { color:#dce9de; font-size:13px; }
+.scan-placeholder span { color:#8fa194; font-size:11px; }
+.scan-controls { display:flex; flex-wrap:wrap; gap:9px; padding:0 16px 12px; }
+.scan-privacy { padding:0 16px 16px; margin:0; color:#849789; font-size:10px; line-height:1.7; }
+.scan-error { margin:0 16px 13px; padding:10px 12px; border:1px solid #66403b; border-radius:8px; color:#f0b1a1; background:#291d19; font-size:11px; line-height:1.6; }
+.ocr-progress { display:flex; align-items:center; gap:9px; padding:12px 16px; color:#9be4ad; font-size:11px; }
+.scan-form { padding:0 18px 18px; }
+.scan-actions { align-items:center; }
+.ocr-text { margin-top:16px; padding:12px; border:1px solid #304637; border-radius:8px; color:#c6d7c9; background:#101a13; font-size:11px; }
+.ocr-text summary { cursor:pointer; color:#8de0a4; font-weight:600; }
+.ocr-text pre { max-height:200px; overflow:auto; white-space:pre-wrap; overflow-wrap:anywhere; font:11px/1.6 ui-monospace,monospace; }
+@media (max-width:1000px) { .scan-layout { grid-template-columns:1fr; } }
+@media (max-width:700px) { .scan-preview { min-height:210px; margin:12px; } .scan-form { padding:0 13px 14px; } .scan-actions .button { width:100%; } }

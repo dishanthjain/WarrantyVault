@@ -1,0 +1,14 @@
+USE warrantyvault;
+
+CREATE TABLE IF NOT EXISTS Documents (
+  Document_ID INT AUTO_INCREMENT PRIMARY KEY,
+  Product_ID INT NULL,
+  FileName VARCHAR(255) NOT NULL,
+  MimeType VARCHAR(100) NOT NULL DEFAULT 'image/jpeg',
+  FileData LONGBLOB NOT NULL,
+  ExtractedText TEXT,
+  CreatedAt TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  CONSTRAINT fk_documents_product
+    FOREIGN KEY (Product_ID) REFERENCES Products(Product_ID)
+    ON DELETE SET NULL ON UPDATE CASCADE
+);
